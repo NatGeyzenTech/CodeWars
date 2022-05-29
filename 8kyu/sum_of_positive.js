@@ -29,19 +29,19 @@ const positiveSum = arr => {
 // SOLUTION 2A: Using filter() and reduce() array methods
 function positiveSum(arr) {
     return arr.filter(num => num > 0)                   
-              .reduce((sum, curr) => sum += curr, 0);     
+              .reduce((sum, curr) => sum + curr, 0);     
 }
 
 // SOLUTION 2B: ES6 arrow function alternative
 const positiveSum = arr => 
     arr.filter(num => num > 0)
-       .reduce((sum, curr) => sum += curr, 0); 
+       .reduce((sum, curr) => sum + curr, 0); 
 
 // SOLUTION 3A: Using  reduce() array method only
 function positiveSum(arr) {
-    return arr.reduce((sum, curr) => curr > 0 ? sum += curr : 0, 0);     
+    return arr.reduce((sum, curr) => curr > 0 ? sum + curr : sum, 0);     
 }
 
 // SOLUTION 3B: ES6 arrow function alternative
 const positiveSum = arr => 
-    arr.reduce((sum, curr) => curr > 0 ? sum += curr : 0, 0);  
+    arr.reduce((sum, curr) => curr > 0 ? sum + curr : sum, 0);  

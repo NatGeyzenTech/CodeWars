@@ -9,21 +9,21 @@
    The first character in the string is always a number.
 */ 
 
-// SOLUTION 1A: Using parseIst() and slice()
+// SOLUTION 1A: Using parseIst()
 function getAge(inputString){
-    return parseInt(inputString.slice(0, 1));
+    return parseInt(inputString);
 }
 
 // SOLUTION 1B: ES6 arrow function alternative
-const getAge = inputString => parseInt(inputString.slice(0, 1));
+const getAge = inputString => parseInt(inputString);
 
 // SOLUTION 2A: Using Number() and charAt()
 function getAge(inputString){
-    return Number(inputString.charAt(0));
+    return Number(inputString[0]);
 }
 
 // SOLUTION 2B: ES6 arrow function alternative
-const getAge = inputString => Number(inputString.charAt(0));
+const getAge = inputString => Number(inputString[0]);
 
 // SOLUTION 3A: Using the unary operator and regex
 function getAge(inputString){

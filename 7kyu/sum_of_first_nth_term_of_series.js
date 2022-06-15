@@ -40,7 +40,7 @@ function SeriesSum(n) {
 // SOLUTION 2B: ES6 arrow function alternative
 const SeriesSum = n => [...Array(n)].reduce((sum, curr, i) => sum + 1 / (3 * i + 1), 0).toFixed(2);
 
-// SOLUTION 3A: Recursively calcultaing the sum
+// SOLUTION 3A: Recursively calculating the sum
 function SeriesSum(n, sum = 0) {
    return n === 0 ? sum.toFixed(2) : SeriesSum(n - 1, sum += 1 / (3 * n - 2));
 }
